@@ -74,16 +74,14 @@ nav a:hover {
 
 }
 
-pre{
+pre {
 
     white-space: pre-wrap;
 
-    color:white;
+    color: white;
 
-    font-family: Consolas, monospace;
+    font-size: 16px;
 
-    font-size:16px;
-
-    line-height:1.6;
+    line-height: 1.5;
 
 }
