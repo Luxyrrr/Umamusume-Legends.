@@ -2,7 +2,7 @@ document.getElementById("sheetsBtn").onclick = function () {
 
 document.getElementById("contenido").innerHTML = `
 
-<h2>Sheet</h2>
+<h2>Sheets</h2>
 
 <input type="text" placeholder="Buscar en la plantilla...">
 
