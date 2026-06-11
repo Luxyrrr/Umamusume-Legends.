@@ -16,3 +16,30 @@ p {
     color: white;
     font-size: 18px;
 }
+
+nav {
+    background-color: #111111;
+
+    padding: 15px;
+
+    border-bottom: 2px solid #ffd54f;
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-right: 20px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+
+    color: #ffd54f;
+
+}
