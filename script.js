@@ -4,23 +4,33 @@ document.getElementById("contenido").innerHTML = `
 
 <h2>Sheets</h2>
 
-<input type="text" placeholder="Buscar en la plantilla...">
+<input type="text" placeholder="Buscar plantilla...">
 
 <hr>
 
-<h3>Basic Information</h3>
+<p id="femaleSheet">Female Sheet</p>
+
+<p id="maleSheet">Male Sheet</p>
+
+<div id="sheetContent"></div>
+
+`;
+
+};
+
+document.addEventListener("click", function(event){
+
+if(event.target.id=="femaleSheet"){
+
+document.getElementById("sheetContent").innerHTML=`
+
+<hr>
+
+<h3>Female Sheet</h3>
 
 <p><b>Name:</b></p>
 
 <p><b>Alias:</b></p>
-
-<p><b>Kana:</b></p>
-
-<p><b>Birthday:</b></p>
-
-<hr>
-
-<h3>Pedigree</h3>
 
 <p><b>Sire:</b></p>
 
@@ -28,26 +38,34 @@ document.getElementById("contenido").innerHTML = `
 
 <p><b>Damsire:</b></p>
 
-<hr>
+`;
 
-<h3>Racing</h3>
+}
 
-<p><b>Surface:</b></p>
+if(event.target.id=="maleSheet"){
 
-<p><b>Distance:</b></p>
-
-<p><b>Running Style:</b></p>
+document.getElementById("sheetContent").innerHTML=`
 
 <hr>
 
-<h3>Lore</h3>
+<h3>Male Sheet</h3>
 
-<p></p>
+<p><b>Name:</b></p>
+
+<p><b>Alias:</b></p>
+
+<p><b>Sire:</b></p>
+
+<p><b>Dam:</b></p>
+
+<p><b>Damsire:</b></p>
 
 `;
 
-};
+}
 
+});
+                          
 document.getElementById("umasBtn").onclick = function () {
 
 document.getElementById("contenido").innerHTML = `
