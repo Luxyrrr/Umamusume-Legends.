@@ -234,7 +234,7 @@ document.getElementById("sheetContent").innerHTML=`
 ୨♡୧── ⟨𝑫𝒂𝒘𝒏 𝒐𝒇 𝒂 𝑵𝒆𝒘 𝑫𝒂𝒚⟩ ──୨♡୧
 ╰─────────────────────╯
 
-<pre>
+</pre>
 
 `;
 
