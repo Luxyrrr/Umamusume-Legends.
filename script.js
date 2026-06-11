@@ -8,9 +8,17 @@ document.getElementById("contenido").innerHTML = `
 
 <hr>
 
-<p id="femaleSheet">Female Sheet</p>
+<div class="sheetOption" id="femaleSheet">
 
-<p id="maleSheet">Male Sheet</p>
+♀ Female Sheet
+
+</div>
+
+<div class="sheetOption" id="maleSheet">
+
+♂ Male Sheet
+
+</div>
 
 <div id="sheetContent"></div>
 
