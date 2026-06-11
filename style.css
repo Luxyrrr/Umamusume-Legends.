@@ -73,3 +73,17 @@ nav a:hover {
     transform: translateX(5px);
 
 }
+
+pre{
+
+    white-space: pre-wrap;
+
+    color:white;
+
+    font-family: Consolas, monospace;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
