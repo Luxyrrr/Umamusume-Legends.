@@ -4,8 +4,6 @@ document.getElementById("contenido").innerHTML = `
 
 <h2>Sheets</h2>
 
-<input type="text" id="sheetSearch" placeholder="Buscar plantilla...">
-
 <hr>
 
 <div class="sheetOption" id="femaleSheet">
@@ -549,11 +547,81 @@ renderUmas(umas);
 document.getElementById("racesBtn").onclick = function () {
 
 document.getElementById("contenido").innerHTML = `
+
 <h2>Races</h2>
 
-<input type="text" placeholder="Buscar carrera...">
+<div id="raceStats">
 
-<p>Aquí aparecerán las carreras.</p>
+<h3>Total Races: <span id="totalRaces">0</span></h3>
+
+<hr>
+
+<p class="raceFilter" data-distance="sprint">Sprint: <span id="sprintCount">0</span></p>
+<p class="raceFilter" data-distance="mile">Mile: <span id="mileCount">0</span></p>
+<p class="raceFilter" data-distance="medium">Medium: <span id="mediumCount">0</span></p>
+<p class="raceFilter" data-distance="long">Long: <span id="longCount">0</span></p>
+
+</div>
+
+<hr>
+
+<div id="raceList"></div>
+
 `;
 
+updateRaceStats();
+renderRaces(races);
+
 };
+
+ let races = [
+  { name: "Satsuki Sho", distance: "medium" },
+  { name: "Arc de Triomphe", distance: "long" },
+  { name: "Short Race Example", distance: "sprint" },
+  { name: "Tokyo Mile", distance: "mile" }
+];
+
+};
+
+function updateRaceStats(){
+
+let total = races.length;
+
+let sprint = races.filter(r => r.distance === "sprint").length;
+let mile = races.filter(r => r.distance === "mile").length;
+let medium = races.filter(r => r.distance === "medium").length;
+let long = races.filter(r => r.distance === "long").length;
+
+document.getElementById("totalRaces").textContent = total;
+document.getElementById("sprintCount").textContent = sprint;
+document.getElementById("mileCount").textContent = mile;
+document.getElementById("mediumCount").textContent = medium;
+document.getElementById("longCount").textContent = long;
+
+}
+
+function renderRaces(list){
+
+let html = "";
+
+list.forEach(r => {
+html += `<div class="raceItem">${r.name}</div>`;
+});
+
+document.getElementById("raceList").innerHTML = html;
+
+}
+
+document.addEventListener("click", function(e){
+
+if(e.target.classList.contains("raceFilter")){
+
+let type = e.target.dataset.distance;
+
+let filtered = races.filter(r => r.distance === type);
+
+renderRaces(filtered);
+
+}
+
+});
