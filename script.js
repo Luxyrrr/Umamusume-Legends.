@@ -2,27 +2,6 @@ document.getElementById("sheetsBtn").onclick = function () {
 
 document.getElementById("contenido").innerHTML = `
 
-document.getElementById("sheetSearch").onkeyup = function(){
-
-let texto = this.value.toLowerCase();
-
-document.getElementById("femaleSheet").style.display="block";
-document.getElementById("maleSheet").style.display="block";
-
-if(!"female sheet".includes(texto)){
-
-document.getElementById("femaleSheet").style.display="none";
-
-}
-
-if(!"male sheet".includes(texto)){
-
-document.getElementById("maleSheet").style.display="none";
-
-}
-
-};
-
 <h2>Sheets</h2>
 
 <input type="text" id="sheetSearch" placeholder="Buscar plantilla...">
