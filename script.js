@@ -544,6 +544,11 @@ renderUmas(umas);
 
 };
 
+<input type="text" placeholder="Buscar carrera...">
+
+<p>Aquí aparecerán las carreras.</p>
+`;
+
 document.getElementById("racesBtn").onclick = function () {
 
 document.getElementById("contenido").innerHTML = `
