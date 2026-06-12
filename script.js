@@ -521,10 +521,28 @@ document.getElementById("umasBtn").onclick = function () {
 document.getElementById("contenido").innerHTML = `
 <h2>Umas</h2>
 
-<input type="text" placeholder="Buscar Uma...">
+<div id="umaStats">
 
-<p>Aquí aparecerán los personajes.</p>
+<h3>Total Umas: <span id="totalUmas">0</span></h3>
+
+<hr>
+
+<p class="filter" data-style="front">Front: <span id="frontCount">0</span></p>
+<p class="filter" data-style="pace">Pace: <span id="paceCount">0</span></p>
+<p class="filter" data-style="late">Late: <span id="lateCount">0</span></p>
+<p class="filter" data-style="end">End: <span id="endCount">0</span></p>
+
+</div>
+
+<hr>
+
+<div id="umaList"></div>
 `;
+
+updateUmaStats();
+renderUmas(umas);
+
+};
 
 };
 
